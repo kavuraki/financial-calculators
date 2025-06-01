@@ -1,0 +1,15 @@
+[theme]
+# Ana etkileşim rengi (örneğin, widget'lar için) - Parlak bir mavi tonu
+primaryColor = "#00A0FF"
+
+# Ana arka plan rengi - Siyah
+backgroundColor = "#000000"
+
+# İkincil arka plan rengi (örneğin, kenar çubuğu için) - Çok koyu bir gri
+secondaryBackgroundColor = "#1A1A1A"
+
+# Ana metin rengi - Kehribar/Turuncu tonu
+textColor = "#FFA500"
+
+# Kullanılacak yazı tipi ailesi - Sabit aralıklı (monospace)
+font = "monospace"
