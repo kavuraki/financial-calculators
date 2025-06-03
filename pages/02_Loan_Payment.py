@@ -23,7 +23,12 @@ def calculate_compound_return(principal, rate_entries, start_date, end_date):
                total_return_percentage (float): Toplam bileşik getiri yüzdesi.
                number_of_days (int): Hesaplama periyodundaki gün sayısı.
     """
-    if not rate_entries or rate_entries.empty:
+    # The original problematic line was: if not rate_entries or rate_entries.empty:
+    # This caused "ValueError: The truth value of a DataFrame is ambiguous".
+    # Correct check for an empty DataFrame is just rate_entries.empty.
+    # If rate_entries could be None, it would be "if rate_entries is None or rate_entries.empty:"
+    # Given the error, rate_entries was a DataFrame, so "not rate_entries" is ambiguous.
+    if rate_entries.empty:
         st.error("Lütfen en az bir faiz oranı girişi yapınız.")
         return 0.0, 0
 
